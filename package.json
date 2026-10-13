@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "description": "Telegram-бот для сбора брифа на видеопроект (webhook, Vercel)",
+  "scripts": {
+    "local": "node scripts/local.js"
+  },
   "engines": {
     "node": ">=18"
   }

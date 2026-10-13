@@ -13,6 +13,7 @@ lib/flow.js      — тексты и вопросы брифа (правьте �
 lib/bot.js       — логика бота
 lib/store.js     — хранение ответов в Upstash Redis
 lib/telegram.js  — запросы к Telegram
+scripts/local.js — запуск на своём компьютере (npm run local)
 vercel.json      — расписание напоминаний (09:00 UTC = 12:00 МСК)
 ```
 
@@ -58,6 +59,24 @@ https://<имя-проекта>.vercel.app/api/setup?key=<ваш WEBHOOK_SECRET>
 
 ### 6. Проверка
 Пройдите бриф сами от `/start` до конца. Бриф и референсы должны прийти вам в личку.
+
+## Запуск на своём компьютере
+
+Удобно, чтобы проверить правки до выкладки. Нужен Node.js 18 или новее (`node -v`).
+
+```
+git clone https://github.com/pplakhin/Production_brief_bot.git
+cd Production_brief_bot
+cp .env.example .env
+open -e .env          # впишите TELEGRAM_BOT_TOKEN и ADMIN_CHAT_ID, сохраните
+npm run local
+```
+
+- Бот работает, пока открыт терминал. Остановить — `Ctrl+C`.
+- Без ключей Upstash в `.env` ответы хранятся в памяти и пропадают после остановки.
+- Напоминания локально не отправляются.
+- При запуске снимается вебхук, поэтому бот на Vercel перестаёт отвечать.
+  Чтобы вернуть его, снова откройте `https://<имя-проекта>.vercel.app/api/setup?key=<WEBHOOK_SECRET>`.
 
 ## Как менять бота
 
