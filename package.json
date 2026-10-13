@@ -1,0 +1,10 @@
+{
+  "name": "brief-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Telegram-бот для сбора брифа на видеопроект (webhook, Vercel)",
+  "engines": {
+    "node": ">=18"
+  }
+}
