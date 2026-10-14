@@ -13,6 +13,7 @@ lib/flow.js      — тексты и вопросы брифа (правьте �
 lib/bot.js       — логика бота
 lib/store.js     — хранение ответов в Upstash Redis
 lib/telegram.js  — запросы к Telegram
+lib/file.js      — бриф файлом (HTML) для вас и клиента
 scripts/local.js — запуск на своём компьютере (npm run local)
 vercel.json      — расписание напоминаний (09:00 UTC = 12:00 МСК)
 ```
